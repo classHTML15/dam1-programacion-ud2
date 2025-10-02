@@ -13,9 +13,13 @@ public class DatosUsuario {
         String correo = sc.nextLine();
         sc.nextLine();
 
-
+        // Email valido o no
         boolean emailValido = ProcesadorTexto.esEmailValido(correo);
-        if (emailValido) {
+        // No se si esto era lo que pedia con la edad
+        boolean edadValida = edad > 0 || edad < 120;
+        // Identificamos la condicion del nombre 
+        boolean nombreCaracteres = nombre.length() > 2 || nombre.length() < 20;
+        if (emailValido && edadValida && nombreCaracteres) {
 
             Usuario usuario = new Usuario(nombre, edad, correo);
             usuario.mostrarInformacion();
@@ -26,22 +30,10 @@ public class DatosUsuario {
 
         }
 
-        // No se si esto era lo que pedia con la edad
-        if (edad >= 120) {
-
-            System.out.println("Error");
-
-        } else if (edad <= 120) {
-
-            System.out.println("El correo esta correcto");
-
-        }
-
-
+        // Normalizar nombre
         String name = "samuel";
         System.out.println("El nombre es: " + name.substring(0,1).toUpperCase() + name.substring(1).toLowerCase());
-
-        
+        System.out.println("Nombre sin espacios: " + name.trim());
         sc.close();
     }
 }
