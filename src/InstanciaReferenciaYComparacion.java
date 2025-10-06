@@ -1,4 +1,5 @@
 import utilidades.Cancion;
+import utilidades.Pelicula;
 
 public class InstanciaReferenciaYComparacion {
     
@@ -41,6 +42,9 @@ public class InstanciaReferenciaYComparacion {
 
         // Tu código aquí ↓
 
+        c3 = new Cancion("Waka Waka" , "Shakira");
+        c4 = new Cancion("Waka Waka" , "Shakira");
+        System.out.println(c3.equals(c4));
 
         // ================================
         // EJERCICIO 4: Comparación en Pelicula
@@ -52,6 +56,10 @@ public class InstanciaReferenciaYComparacion {
 
         // Tu código aquí ↓
         
+        Pelicula p1 = new Pelicula();
+        Pelicula p2 = new Pelicula();
+        System.out.println(p1 == p2);
+        System.out.println(p1.equals(p2));
 
         // ================================
         // EJERCICIO 5: Referencias
@@ -76,3 +84,25 @@ public class InstanciaReferenciaYComparacion {
         // Tu código aquí ↓
     }
 }
+
+// ================================
+// RESPUESTAS DE REFLEXIÓN
+// ================================
+// Ejercicio 1: ¿Qué diferencia hay entre el constructor por defecto y el parametrizado?
+// Respuesta: ...
+
+// Ejercicio 2: ¿Por qué da false al comparar con == dos objetos con los mismos datos?
+// Respuesta: ...
+
+// Ejercicio 3: ¿Qué diferencia hay entre == y equals()? ¿Por qué ahora sí devuelve true?
+// Respuesta: ...
+
+// Ejercicio 4: ¿Por qué en Pelicula equals no funciona como en Cancion?
+// Respuesta: ...
+
+// Ejercicio 5: ¿Qué ocurre cuando modificas el objeto a través de c6? ¿Qué demuestra?
+// Respuesta: ...
+
+// Ejercicio 6: ¿Qué error aparece al acceder a un método de p3 siendo null?
+// ¿Qué significa realmente que una variable valga null?
+// Respuesta: ...
