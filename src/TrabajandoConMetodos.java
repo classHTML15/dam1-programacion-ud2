@@ -36,7 +36,7 @@ public class TrabajandoConMetodos {
 
         int n = 10;
         method.incrementar(n);
-        System.out.println(n);
+        System.out.println();
 
         // ================================
         // EJERCICIO 4: Paso por referencia (objetos)
