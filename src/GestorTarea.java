@@ -60,9 +60,11 @@ public class GestorTarea {
 
         // Tu código aquí ↓
         
-        Scanner sc = new Scanner (System.in);
-        System.out.println("¿Hiciste la tarea?");
-        sc.nextLine();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("¿Completaste la tarea? (si/no)");
+        boolean estado = sc.nextBoolean();
+        System.out.println(estadotarea(estado));
+        sc.close();
 
         // ================================
         // EJERCICIO 6: Productividad
@@ -128,10 +130,10 @@ public class GestorTarea {
     }
 
 
-    public static String estadotarea(boolean completada) {
+    public static String estadotarea(boolean estado) {
         
 
-        if (completada) {
+        if (estado) {
 
             return "Completada con exito";
 
