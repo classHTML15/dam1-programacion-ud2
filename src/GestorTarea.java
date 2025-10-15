@@ -100,20 +100,22 @@ public class GestorTarea {
     }
 
      // Aquí debéis crear los métodos fuera del main ↓↓↓
+
+    // Metodo Bienvenida
     public static void llamado(String nombre) {
         
         System.out.println("Hola " + nombre);
 
     }
 
-
+    // Metodo Duracion tiempo
     public static int duraciontotal(int minutos, int minutos2) {
         
         return minutos + minutos2;
 
     }
 
-
+    // Metodo Conversor tiempo
     public static void conversiontiempo(int mostrarHorasyMinutos) {
         
         int horas = mostrarHorasyMinutos / 60;
@@ -122,14 +124,14 @@ public class GestorTarea {
 
     }
 
-
+    // Metodo Recordatorio
     public static void recordatorio(String nombretarea, String prioridad) {
         
         System.out.println("Prioridad: " + prioridad + "; Nombre tarea: " + nombretarea);
 
     }
 
-
+    // Metodo Estado tarea
     public static String estadotarea(boolean estado) {
         
 
@@ -143,5 +145,10 @@ public class GestorTarea {
 
         }
 
+    }
+
+    // Metodo Productividad
+    public static void main() {
+        
     }
 }

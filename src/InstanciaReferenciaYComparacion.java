@@ -29,7 +29,7 @@ public class InstanciaReferenciaYComparacion {
 
         // Tu código aquí ↓
 
-        Cancion c3 = new Cancion("Viva la vida" , "Ricky Martin");
+        Cancion c3 = new Cancion("Waka Waka" , "Shakira");
         Cancion c4 = new Cancion("Waka Waka" , "Shakira");
         System.out.println(c3 == c4);
 
@@ -56,8 +56,8 @@ public class InstanciaReferenciaYComparacion {
 
         // Tu código aquí ↓
         
-        Pelicula p1 = new Pelicula();
-        Pelicula p2 = new Pelicula();
+        Pelicula p1 = new Pelicula("Transformers 3", 2011);
+        Pelicula p2 = new Pelicula("Transformers 3", 2011);
         System.out.println(p1 == p2);
         System.out.println(p1.equals(p2));
 
@@ -72,6 +72,11 @@ public class InstanciaReferenciaYComparacion {
 
         // Tu código aquí ↓
         
+        Cancion c5 = new Cancion("Tortura", "Shakira y Alejandro Sanz");
+        Cancion c6 = c5;
+        System.out.println(c5 == c6);
+        c6.setTitutlo("Tortura (Remix)");
+        System.out.println(c5);
 
         // ================================
         // EJERCICIO 6: null
@@ -82,6 +87,10 @@ public class InstanciaReferenciaYComparacion {
         //    Comenta la línea después de probar, porque lanzará un error.
 
         // Tu código aquí ↓
+
+        Pelicula p3 = (null);
+        System.out.println(p3);
+        //System.out.println(p3.getTitulo());
     }
 }
 
@@ -90,19 +99,25 @@ public class InstanciaReferenciaYComparacion {
 // ================================
 // Ejercicio 1: ¿Qué diferencia hay entre el constructor por defecto y el parametrizado?
 // Respuesta: ...
+// - La diferencia es que, el contructor por defecto crea objetos predefinidos, mientras que el parametrizo crea un objeto personalizable.
 
 // Ejercicio 2: ¿Por qué da false al comparar con == dos objetos con los mismos datos?
 // Respuesta: ...
+// - Porque esta comparando referencias del mismo objeto y eso no significa que den igual
 
 // Ejercicio 3: ¿Qué diferencia hay entre == y equals()? ¿Por qué ahora sí devuelve true?
 // Respuesta: ...
+// - La diferencia es que una compara referencias de un objeto y la otra compara el contenido de un objeto. Es por eso que al comparar con equals(), da que son iguales.
 
 // Ejercicio 4: ¿Por qué en Pelicula equals no funciona como en Cancion?
 // Respuesta: ...
+// - Porque no sobreescribes el equals(), teniendo el == en la misma funcion. Se tiene que sobreescribir para cambiar el valor y que fuera true.
 
 // Ejercicio 5: ¿Qué ocurre cuando modificas el objeto a través de c6? ¿Qué demuestra?
 // Respuesta: ...
+// - Que con el set.Titutlo se puede cambiar el titulo inicial de una variable o del nombre de una variable.
 
 // Ejercicio 6: ¿Qué error aparece al acceder a un método de p3 siendo null?
 // ¿Qué significa realmente que una variable valga null?
 // Respuesta: ...
+// - Aparece "Exception in thread "main" java.lang.NullPointerException: Cannot invoke "utilidades.Pelicula.getTitulo()" because "p3" is null", que basicamente es que la variable no tenga un nombre o valor asignado, el valor al imprimirlo por pantalla sera la respuesta que avabo de poner
