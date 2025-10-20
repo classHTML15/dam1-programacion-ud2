@@ -47,6 +47,9 @@ public class TrabajandoConMetodos {
         // 3. Imprime la canción después.
         // Tu código aquí ↓
 
+        Cancion c = new Cancion();
+        method.cambiarTitulo(null);
+
     }
 }
 
