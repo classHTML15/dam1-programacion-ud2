@@ -1,4 +1,5 @@
 import utilidades.CuentaBancaria;
+import utilidades.Videojuego;
 
 public class Main {
     public static void main(String[] args) {
@@ -47,7 +48,7 @@ public class Main {
         // para asegurarte de que comprendes la diferencia entre public y private.
 
         Videojuego v1 = new Videojuego("GTA 5", "PS5");
-        System.out.println();
+        System.out.println(v1);
     }
 }
 

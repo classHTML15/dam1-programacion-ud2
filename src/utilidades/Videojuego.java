@@ -1,8 +1,8 @@
 package utilidades;
 
 public class Videojuego {
-    private String titulo;
-    private String plataforma;
+    public String titulo;
+    public String plataforma;
 
     public Videojuego(String titulo, String plataforma) {
         this.titulo = titulo;
