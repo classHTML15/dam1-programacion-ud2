@@ -1,3 +1,4 @@
+import utilidades.Cancion;
 import utilidades.DemoMetodos;
 
 public class TrabajandoConMetodos {
@@ -47,8 +48,9 @@ public class TrabajandoConMetodos {
         // 3. Imprime la canción después.
         // Tu código aquí ↓
 
-        Cancion c = new Cancion("Original");
-        c.setcambiarTitulo("Poker Face");
+        Cancion c = new Cancion("Original", "Lady Gaga");
+        method.cambiarTitulo(c);
+        System.out.println(c);
 
     }
 }
